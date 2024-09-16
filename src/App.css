@@ -17,17 +17,6 @@ body {
   text-align: center;
 }
 
-/* h1 {
-  margin-bottom: 20px;
-} */
-
-
-
-/* .signin-footer-link {
-  color: #007bff;
-  text-decoration: none;
-} */
-
 .dashboard-container header {
   display: flex;
   justify-content: flex-end;

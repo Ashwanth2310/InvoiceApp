@@ -19,3 +19,23 @@ h1{
     border: 6px solid #646fff;
     box-shadow: 0px 0px;
   }
+
+  .camera-container {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .camera-container video {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .camera-container .camera-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 10;
+  }

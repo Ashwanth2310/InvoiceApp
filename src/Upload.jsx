@@ -1,11 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { UserButton } from "@clerk/clerk-react";
+import { UserButton, useUser } from "@clerk/clerk-react";
 import "./Upload.css";
 
 export default function Dashboard() {
   const [isCameraOpen, setIsCameraOpen] = useState(false);
   const videoRef = useRef(null);
   const canvasRef = useRef(null);
+  const { user } = useUser();
 
   const openCamera = async () => {
     try {
@@ -62,6 +63,7 @@ export default function Dashboard() {
       </header>
       <div className="dashboard-container">
         <main>
+          <h2>Welcome, {user?.username}!</h2>
           <h1>Upload Invoice</h1>
           {!isCameraOpen ? (
             <button className="camera-button" onClick={() => setIsCameraOpen(true)}>Open Camera</button>
